@@ -8,7 +8,6 @@ APP_URL = f'https://heroku123-test-app.herokuapp.com/{TOKEN}'
 bot = telebot.TeleBot(TOKEN)
 
 server = Flask(__name__)
-sslify = SSLify(server)
 
 @bot.message_handler(commands=['start', 'help'])
 def start(message):
