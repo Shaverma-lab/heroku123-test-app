@@ -1,6 +1,6 @@
 import telebot
 from flask import Flask, request
-from flask_sslify import SSLify
+import os
 
 
 TOKEN = '5156487975:AAEA4IaC4ivT_08mMjame_ryhOM9-AngDpI'
@@ -33,4 +33,4 @@ def webhook():
     return '!', 200
 
 if __name__ == '__main__':
-    server.run(host='0.0.0.0', port=5000)
+    server.run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)))
