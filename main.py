@@ -1,5 +1,3 @@
-from crypt import methods
-from turtle import update
 import telebot
 from flask import Flask, request
 from flask_sslify import SSLify
